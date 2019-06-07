@@ -15,7 +15,7 @@ export interface ResponseTitleProps {
 
 export class ResponseTitle extends React.PureComponent<ResponseTitleProps> {
   render() {
-    const { title, type, empty, code, opened, className, onClick } = this.props;
+    const { title, type, empty, opened, className, onClick } = this.props;
     return (
       <div className={className} onClick={(!empty && onClick) || undefined}>
         {!empty && (
@@ -26,7 +26,6 @@ export class ResponseTitle extends React.PureComponent<ResponseTitleProps> {
             float={'left'}
           />
         )}
-        {/* <strong>{code} </strong> */}
         <Markdown compact={true} inline={true} source={title} />
       </div>
     );
